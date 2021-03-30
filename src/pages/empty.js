@@ -1,25 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../pages/components/Layout"
-import Main from "../pages/components/Main"
+import Layout from "./components/Layout"
+import Main from "./components/Main"
 import ReactMarkdown from "react-markdown"
-import Tag from "../pages/components/tag"
+import Tag from "./components/tag"
 
-export default ({ data, context }) => {
+const Empty =  () => {
   // const post = data.markdownRemark
   // console.log(context);
   return (
-    <Layout>
-      <div className="p-10  bg-white">
-        {["javascript", "React", "Css", "Html"].map((val, i) => (
-          <Tag className="" key={i}>
-            {val}
-          </Tag>
-        ))}
+      <div className="text-gray-500 text-light text-3xl h-full w-full bg-white rounded-2xl center">
+          🏳‍🌈 这里暂时还啥也没有...
       </div>
-    </Layout>
   )
 }
+
+export default Empty
 
 // export const query = graphql`
 //   query($slug: String!) {

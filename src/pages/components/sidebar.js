@@ -2,8 +2,7 @@ import React from "react"
 import Menu from "./Menu"
 import { Link } from "gatsby"
 
-
-const Sidebar = ({show}) => {
+const Sidebar = ({ show }) => {
   const menu_data = [
     {
       title: "档案",
@@ -19,10 +18,12 @@ const Sidebar = ({show}) => {
     },
   ]
   return (
-    <div className={`${'mobile'} ${show} mr-8 box-border h-full shadow-xl  border-gray-600  bg-main  border-solid  rounded-xl py-14 p-20 justify-start`}>
+    <div
+      className={`${"mobile"} ${show} mr-8 box-border h-full shadow-xl  border-gray-600   bg-main  border-solid  rounded-xl flex py-14 p-20 justify-between flex-col`}
+    >
       <Link to="/">
         <span className="flex justify-end text-gray-900 text-7xl">
-          <span className="bg-gray-300 w-32 h-32 rounded-2xl mr-10 overflow-hidden"></span>
+          <span className="bg-tea w-28 h-28 rounded-2xl mr-10 overflow-hidden"></span>
           <span>
             <h1 className="text-5xl">
               Hooo
@@ -34,8 +35,22 @@ const Sidebar = ({show}) => {
       </Link>
 
       <Menu data={menu_data} />
-      <span></span>
+
+      <span className="flex-1 text-gray-400 space-x-10 flex object-bottom justify-evenly items-end">
+        <a className="link" href="https://github.com/wangtao1217">
+          Github
+        </a>
+        <a className="link" href="https://space.bilibili.com/282193341">
+          Bilibili
+        </a>
       
+        <a
+          className="link"
+          href="https://mail.163.com/js6/main.jsp?sid=WBMkUUteKSgiKXAMUNeeMgYYmoLEHDCY&df=mail163_letter#module=welcome.WelcomeModule%7C%7B%7D"
+        >
+          Email
+        </a>
+      </span>
     </div>
   )
 }

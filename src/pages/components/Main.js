@@ -2,7 +2,7 @@ import React from 'react'
 
 const Main = ({children}) => {
     return (
-        <div className="flex-1  h-full overflow-y-scroll  ">
+        <div className="flex-1  h-full overflow-y-auto  ">
             {children}
         </div>
     )

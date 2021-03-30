@@ -4,22 +4,19 @@ import Layout from "../pages/components/Layout"
 import Main from "../pages/components/Main"
 import ReactMarkdown from "react-markdown"
 import Tag from "../pages/components/tag"
+import Empty from '../pages/empty'
 
-export default ({ data, context }) => {
+const Record =  () => {
   // const post = data.markdownRemark
   // console.log(context);
   return (
     <Layout>
-      <div className="p-10  bg-white">
-        {["javascript", "React", "Css", "Html"].map((val, i) => (
-          <Tag className="" key={i}>
-            {val}
-          </Tag>
-        ))}
-      </div>
+     <Empty/>
     </Layout>
   )
 }
+
+export default Record
 
 // export const query = graphql`
 //   query($slug: String!) {

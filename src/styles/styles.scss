@@ -7,14 +7,21 @@ body {
     display: flex;
     padding: 0;
     margin: 0;
-  }
+    
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 h1 {
-    font-size: 44px;
+    font-size: 36px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 32px;
 }
 
 h3 {
@@ -22,11 +29,19 @@ h3 {
 }
 
 h4 {
-    font-size: 27px;
+    font-size: 21px;
 }
 
 h5 {
     font-size: 21px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-bottom: 1.2rem;
 }
 
 blockquote {
@@ -39,21 +54,30 @@ blockquote {
 
 li {
     list-style: circle;
+    margin: 10px 0;
 }
 
 main a {
     text-underline-position: above;
-    background-color: rgba(190, 100, 100, .3);
+    // background-color: rgba(190, 100, 100, .3);
 
     &:hover {
         cursor: pointer;
-        background-color: rgba(190, 100, 100, .5);
+        // background-color: rgba(190, 100, 100, .5);
         text-decoration: underline;
     }
 }
 
-p {
-    font-size: 1.2rem;
+
+
+code {
+    border-radius: 2px;
+    box-shadow: 0 0 3px 1px rgb(0 0 100 / 5%) inset;
+    background-color: rgba(220, 220, 220, .5);
+    padding: 3px 6px;
+    margin: 0 5px;
+    color: #6a6a73;
+    font-size: .9rem;
 }
 
 .navigation-buttom {
@@ -85,7 +109,7 @@ p {
         margin-bottom: 30px;
     }
 
-    .full-screen{
+    .full-screen {
         // padding: 5px;
     }
 }
