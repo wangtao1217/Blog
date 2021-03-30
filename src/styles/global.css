@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  padding: 0;
-  margin: 0;
+
+.center{
+  @apply flex justify-center items-center;
+}
+
+.link{
+  @apply hover:underline cursor-pointer hover:text-tea;
 }
 
 #container {
@@ -28,17 +29,6 @@ body {
   @apply text-6xl;
 }
 
-li{
-  list-style: circle;
-}
-
-h1{
-  font-size: 30px;
-}
-
-h2{
-  font-size: 22px;
-}
 
 .mobole{
   position: fixed;

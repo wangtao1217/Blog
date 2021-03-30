@@ -1,10 +1,6 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 
-// type ItemProps = {
-//     title: String
-//     summarize: String
-// }
 
 const Item = ({ title, description, summarize, date, route }) => {
   return (

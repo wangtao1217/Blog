@@ -1,7 +1,16 @@
 $layout-breakpoint-small: 320px;
 
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
 h1 {
-    font-size: 48px;
+    font-size: 44px;
 }
 
 h2 {
@@ -28,6 +37,10 @@ blockquote {
     font-size: 1.5rem;
 }
 
+li {
+    list-style: circle;
+}
+
 main a {
     text-underline-position: above;
     background-color: rgba(190, 100, 100, .3);
@@ -48,11 +61,18 @@ p {
     transform: translateX(100px);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
+    .post {
+        padding: 10px;
+    }
+
     .mobile {
-        transition: 1s;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        transition: .5s;
         position: fixed;
-        transform: translateX(-500px);
+        transform: translateX(-100%);
     }
 
     .navigation-buttom {
@@ -63,5 +83,9 @@ p {
     .false {
         transform: translateX(0);
         margin-bottom: 30px;
+    }
+
+    .full-screen{
+        // padding: 5px;
     }
 }

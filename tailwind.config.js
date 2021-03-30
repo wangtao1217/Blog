@@ -10,6 +10,7 @@ module.exports = {
         back: "#F8F8F8",
         main: "#FFFFFF",
         rose: colors.red[500],
+        tea: "#e0ac7e",
         pink: colors.fuchsia,
       },
     },

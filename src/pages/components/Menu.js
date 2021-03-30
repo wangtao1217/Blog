@@ -1,4 +1,3 @@
-import { data } from "autoprefixer"
 import React from "react"
 import { Link } from "gatsby"
 
@@ -9,7 +8,7 @@ const Menu = ({ data }) => {
         const { title, route } = item
         return (
           <Link to={route} key={i}>
-            <div className="w-full hover:text-rose hover:underline">
+            <div className="w-full hover:text-tea hover:underline">
               <h1 className="my-6 text-4xl font-serif tracking-widest">{title}</h1>
             </div>
           </Link>
