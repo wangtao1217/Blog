@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  height: 100vh;
+  width: 100vw;
+}
+#container-2 {
+  height: 100vh;
+  width: 100vw;
+}
+
+.full-screen{
+  height: 100vh;
+  width: 100vw;
+}
+
+.title {
+  @apply text-6xl;
+}
+
+li{
+  list-style: circle;
+}
+
+h1{
+  font-size: 30px;
+}
+
+h2{
+  font-size: 22px;
+}
+
+.mobole{
+  position: fixed;
+  
+}

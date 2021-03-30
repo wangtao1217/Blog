@@ -1,0 +1,67 @@
+$layout-breakpoint-small: 320px;
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 27px;
+}
+
+h5 {
+    font-size: 21px;
+}
+
+blockquote {
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    background-color: rgba(255, 229, 100, 0.3);
+    border-left: 6px solid rgba(255, 229, 100, 0.3);
+    font-size: 1.5rem;
+}
+
+main a {
+    text-underline-position: above;
+    background-color: rgba(190, 100, 100, .3);
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(190, 100, 100, .5);
+        text-decoration: underline;
+    }
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.navigation-buttom {
+    position: fixed;
+    transform: translateX(100px);
+}
+
+@media (max-width: 640px) {
+    .mobile {
+        transition: 1s;
+        position: fixed;
+        transform: translateX(-500px);
+    }
+
+    .navigation-buttom {
+        position: fixed;
+        transform: translateX(0);
+    }
+
+    .false {
+        transform: translateX(0);
+        margin-bottom: 30px;
+    }
+}
