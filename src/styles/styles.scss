@@ -1,5 +1,8 @@
 $layout-breakpoint-small: 320px;
 
+html {
+    font-size: 10px;
+}
 
 body {
     height: 100vh;
@@ -7,7 +10,7 @@ body {
     display: flex;
     padding: 0;
     margin: 0;
-    
+
 }
 
 p {
@@ -50,20 +53,29 @@ blockquote {
     background-color: rgba(255, 229, 100, 0.3);
     border-left: 6px solid rgba(255, 229, 100, 0.3);
     font-size: 1.5rem;
+    width: 100%;
 }
 
 li {
+    margin: 7px 0;
+    padding-left: 1.2rem;
+}
+
+ul {
+    margin-left: 30px;
     list-style: circle;
-    margin: 10px 0;
+}
+
+ol {
+    margin-left: 30px;
+    list-style: decimal-leading-zero;
 }
 
 main a {
     text-underline-position: above;
-    // background-color: rgba(190, 100, 100, .3);
 
     &:hover {
         cursor: pointer;
-        // background-color: rgba(190, 100, 100, .5);
         text-decoration: underline;
     }
 }
@@ -86,17 +98,23 @@ code {
 }
 
 @media (max-width: 700px) {
+
+    html {
+        font-size: 10px;
+    }
+
     .post {
-        padding: 10px;
+        padding: 1.5rem;
     }
 
     .mobile {
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 80vw;
         transition: .5s;
         position: fixed;
         transform: translateX(-100%);
+        padding: 2rem 2.5rem;
     }
 
     .navigation-buttom {
@@ -110,6 +128,6 @@ code {
     }
 
     .full-screen {
-        // padding: 5px;
+        padding: 5px;
     }
 }

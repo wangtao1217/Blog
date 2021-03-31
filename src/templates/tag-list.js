@@ -1,24 +1,37 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../pages/components/Layout"
-import Main from "../pages/components/Main"
-import ReactMarkdown from "react-markdown"
-import Tag from "../pages/components/tag"
 import Item from "../pages/components/Item"
 
-const TagList = ({ data, context }) => {
-  // const post = data.markdownRemark
-  // console.log(context);
+const TagList = ({ data, pageContext }) => {
+  const { tag } = pageContext
+  const { nodes } = data.allMarkdownRemark
+  // console.log("value: ", nodes)
+  // console.log("pageContext: ", pageContext)
   return (
     <Layout>
       <div className="p-10  bg-white h-full overflow-auto">
         <h2 className="center text-gray-600 border-b-2 border-gray-200 pb-10">
-          #Html
+          # {tag}
         </h2>
         <div className="divide-y-4 divide-yellow-600 divide-dashed">
-          {[1, 2, 3, 4].map(() => (
-            <Item title={"haha"} description={"gagagagaag"} />
-          ))}
+          {nodes.map(
+            (
+              {
+                frontmatter: { title, description, date, tags },
+                fields: { slug },
+              },
+              i
+            ) => (
+              <Item
+                key={i}
+                title={title}
+                date={date}
+                route={slug}
+                description={description}
+              />
+            )
+          )}
         </div>
       </div>
     </Layout>
@@ -26,3 +39,21 @@ const TagList = ({ data, context }) => {
 }
 
 export default TagList
+
+export const query = graphql`
+  query($tag: String) {
+    allMarkdownRemark(filter: { frontmatter: { tags: { in: [$tag] } } }) {
+      nodes {
+        frontmatter {
+          title
+          description
+          date
+          tags
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`

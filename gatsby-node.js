@@ -18,9 +18,17 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
+      tagsGroup: allMarkdownRemark {
+        group(field: frontmatter___tags, limit: 100) {
+          fieldValue
+        }
+      }
       allMarkdownRemark {
         edges {
           node {
+            frontmatter {
+              tags
+            }
             fields {
               slug
             }
@@ -29,7 +37,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  // console.log(JSON.stringify(result, null, 4))
+  console.log(JSON.stringify(result, null, 4))
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
@@ -49,12 +57,15 @@ exports.createPages = async ({ graphql, actions }) => {
     },
   })
 
-  createPage({
-    path: "/tag-list",
-    component: path.resolve("./src/templates/tag-list.js"),
-    context: {
-      tags: [1, 2, 3],
-    },
+  const tags = result.data.tagsGroup.group
+  tags.forEach(tag => {
+    createPage({
+      path: `/tag-list/${tag.fieldValue}`,
+      component: path.resolve("./src/templates/tag-list.js"),
+      context: {
+        tag: tag.fieldValue,
+      },
+    })
   })
 
   createPage({

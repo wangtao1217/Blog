@@ -16,6 +16,10 @@ const Sidebar = ({ show }) => {
       title: "读书",
       route: "/reading",
     },
+    {
+      title: "实验室",
+      route: "/experiment"
+    }
   ]
   return (
     <div

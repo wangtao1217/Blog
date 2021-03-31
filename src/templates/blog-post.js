@@ -13,11 +13,11 @@ const BlogPost = ({ data }) => {
             {post.frontmatter.title}
           </span>
         </div>
-        <div className="flex w-full mt-5 text-gray-800 items-center space-x-5">
+        <div className="flex w-full mt-3 text-gray-800 items-center space-x-5">
           <span className="text-2xl  font-light">{post.frontmatter.date}</span>
           <span className="flex space-x-2">
             {post.frontmatter.tags.map((tag, i) => (
-              <Link className="link" to="/tag-list">
+              <Link className="link" to={`/tag-list/${tag}`}>
                 #{tag}
               </Link>
             ))}
