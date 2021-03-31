@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <Main>{children}</Main>
       <span
         onClick={() => setShow(!show)}
-        className="navigation-buttom text-4xl bottom-5 right-5 w-16 h-16 center shadow-lg bg-tea rounded-full"
+        className="navigation-buttom text-4xl bottom-5 right-5 w-20 h-20 center shadow-lg bg-tea rounded-full"
       >
         +
       </span>
