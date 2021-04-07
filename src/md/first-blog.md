@@ -1,13 +1,8 @@
 ---
-title: "第一篇博文"
+title: "不算Blog的第一篇Blog"
 description: ...,
-date: "2021-03-30"
+date: "2021-04-07"
 tags:
-    - 其他
-    - Git
-    - Notes
+    - Diary
 ---
 
->  **还不知道写点啥**
->
-> 先庆祝一下自己的网站终于搭建好了😜
